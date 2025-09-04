@@ -1,6 +1,6 @@
 import os
 import google.generativeai as genai
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from dotenv import load_dotenv
 from PIL import Image
@@ -82,7 +82,12 @@ def generate_from_image():
 
 
 # --- Server Start ---
+
+# Route for the main page
 @app.route('/')
+def index():
+    return render_template('index.html')
+
+# Block to run the app when executed directly
 if __name__ == '__main__':
-    # Use a specific port, e.g., 5001 to avoid conflicts
     app.run(debug=True, port=5001)
