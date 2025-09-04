@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Configuration ---
-    const API_BASE_URL = 'http://127.0.0.1:5001/api';
+  const API_BASE_URL = 'https://ai-exam-maker.onrender.com/api';
 
     // --- Element Selectors ---
     const generateTextBtn = document.getElementById('generate-text-btn');
