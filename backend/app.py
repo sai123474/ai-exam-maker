@@ -82,6 +82,7 @@ def generate_from_image():
 
 
 # --- Server Start ---
+@app.route('/')
 if __name__ == '__main__':
     # Use a specific port, e.g., 5001 to avoid conflicts
     app.run(debug=True, port=5001)
